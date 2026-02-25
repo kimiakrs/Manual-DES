@@ -88,8 +88,8 @@ Ciphertext (64-bit)
 ### Phase1: Key Scheduling
 key scheduling generates 16 round keys (48-bit each) from the original 64-bit key
 
-<p align="center">
-<img src="Key-Scheduling.png" alt="Key Generation" width="800">
+<p align="left">
+<img src="Key-Scheduling.png" alt="Key Generation" width="400">
 <br>
 </p>
 
@@ -107,8 +107,8 @@ Steps:
 
 ### Phase 2: DES Encryption Process
 
-<p align="center">
-<img src="DES-Struc.png" alt="DES Logic" width="800">
+<p align="left">
+<img src="DES-Struc.png" alt="DES Logic" width="400">
 <br>
 </p>
 
