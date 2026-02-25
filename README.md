@@ -1,18 +1,18 @@
-# Implementation of DES (Data Encryption Standard) from Scratch in Python
+# Implementation of Manual DES
 
 This project presents a complete manual implementation of the Data Encryption Standard (DES) in Python, following the official DES specification.
 
 Unlike library-based implementations, this project recreates DES from scratch using:
 
-Predefined permutation tables (IP, FP, PC-1, PC-2, E, P)
+* Predefined permutation tables (IP, FP, PC-1, PC-2, E, P)
 
-16 Feistel rounds
+* 16 Feistel rounds
 
-S-box substitution
+* S-box substitution
 
-Key scheduling
+* Key scheduling
 
-Manual encryption & decryption pipeline
+* Manual encryption & decryption pipeline
 
 The implementation strictly follows the DES standard structure described in your documentation
 
@@ -33,11 +33,11 @@ The implementation strictly follows the DES standard structure described in your
 
 - [Project Overview](#project-overview)
 - [DES Architechture](#des-architechture)
-- [Phase1: DES Encryption (PyCryptodome)](#phase1-des-encryption-cfb-mode)
 - [Permutation & Substitution Tables](#permutation--substitution-tables)
 - [Project Structure](#project-structure)
 - [Security Discussion](#security-discussion)
 - [Key Learning Outcomes](#key-learning-outcomes)
+- [Disclaimer](#disclaimer)
 - [License](#license)
 
 ---
@@ -83,8 +83,15 @@ Final Permutation (FP)
 Ciphertext (64-bit)
 ```
 
+
+
 ### Phase1: Key Scheduling
 key scheduling generates 16 round keys (48-bit each) from the original 64-bit key
+
+<p align="center">
+<img src="Key-Scheduling.png" alt="Key Generation" width="800">
+<br>
+</p>
 
 Steps:
 
@@ -99,6 +106,11 @@ Steps:
 * Produce 16 subkeys
 
 ### Phase 2: DES Encryption Process
+
+<p align="center">
+<img src="DES-Struc.png" alt="DES Logic" width="800">
+<br>
+</p>
 
 Encryption includes:
 
@@ -264,9 +276,7 @@ Modern secure alternatives:
 
 ## Disclaimer
 
-DES is considered insecure for modern applications.
-
-This implementation is strictly for educational and academic purposes.
+DES is considered insecure for modern applications and this implementation is strictly for educational and academic purposes.
 
 ---
  
